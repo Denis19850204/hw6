@@ -294,6 +294,11 @@ body {
   width: 30px;
   height: 30px;
   padding: 0;
+  background-color: var(--secondary-color);
+}
+
+.modal-btn:hover{
+  fill: var(--accent-color);
 }
 
 .form-wrapper{
@@ -323,6 +328,10 @@ body {
 
 .form-label-agree{
   margin-left: 9px;
+}
+
+.form-link-agree{
+  color: var(--accent-color);
 }
 
 .form-field input, textarea{
@@ -362,8 +371,27 @@ body {
 }
 
 .form-wrapper-btn{
+  font-family: Roboto;
+  font-style: 700;
+  font-size: 16px;
+  line-height: 1.88;
+
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+  box-shadow: 0px 4px 4px 0px #00000026;
+
+  border: transparent;
+  border-radius: 4px;
+  padding: 10px 55px;
   margin-bottom: 40px;
 }
+
+.form-wrapper-btn:hover
+.form-wrapper-btn:focus{
+  background-color: var(--hover-button-color);
+}
+  
+
 
 textarea{
   width: 448px;
