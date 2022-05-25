@@ -260,13 +260,12 @@ body {
   pointer-events: none;
 }
 
-.modal-wrapper {
+.modal-wrapper {  
   position: absolute;
   width: 528px;
   height: 581px;
   top: 50%;
-  left: 50%;
-  padding: 40px;
+  left: 50%;  
   background-color: var(--secondary-color);
   border-radius: 4px;
 
@@ -297,16 +296,80 @@ body {
   padding: 0;
 }
 
-.wrapper-input{
-  width: 100%;
+.form-wrapper{
+  width: 528px;
+  padding: 40px;
+  
 }
 
-.wrapper-text{
+.form-field{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  
+
+}
+
+.form-agree{
+  display: flex;
   margin-bottom: 30px;
+  
 }
 
 
+.form-label{
+  display: flex;
+}
 
+.form-label-agree{
+  margin-left: 9px;
+}
+
+.form-field input, textarea{
+  margin: 0;
+  padding: 11px 12px;  
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  
+}
+
+.form-field label{
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  color: var(--main-text-color);
+}
+
+.form-field textarea::placeholder{   
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  
+  color: rgba(117, 117, 117, 0.5);
+}
+
+
+.wrapper-text{  
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.17;
+  color: #212121;
+  margin-top: 40px;
+  
+  
+}
+
+.form-wrapper-btn{
+  margin-bottom: 40px;
+}
+
+textarea{
+  width: 448px;
+  height: 120px;
+  resize: none;
+}
 
 
 /* --------------------------------------------- */
