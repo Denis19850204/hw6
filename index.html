@@ -64,11 +64,20 @@
           <button class="button" type="button" data-modal-open>Заказать услугу</button>
           <div class="backdrop is-hidden" data-modal>
             <div class="modal-wrapper">
+
+              <p class="wrapper-text">Оставьте свои данные, мы вам перезвоним</p>
+
+              <form class="form-wrapper" name="form-wrapper" method="">
+                <label class="wrapper-label">
+                <input class="wrapper-input" type="text" name="name">
+                </label>
+                
               <button class="modal-btn" data-modal-close>
                 <svg class="modal-icon" width="18" height="18">
                   <use href="./img/symbol-defs.svg#icon-close-black-18dp-2-1-1"></use>
                 </svg>
               </button>
+              </form>
             </div>
           </div>
         </div>
@@ -437,13 +446,14 @@
           </ul>
         </div> 
 
-        <form>
+        
           <div class="form-list">
             <p class="form-text">Подпишитесь на рассылку</p>
-          <input type="text" name="email">
-          <button type="button">Подписаться 
+            <form class="form-footer" name="form-footer" method="post">
+          <input class="footer-input" type="text" name="email" placeholder="E-mail">
+          <button class="form-btn" type="button">Подписаться 
             <svg class="form-btn-icon" width="24" height="24">
-            <use href=""></use>
+            <use href="./img/symbol-defs.svg#icon-icon-send-1"></use>
           </svg>
           </button> 
           </div>
