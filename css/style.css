@@ -295,10 +295,16 @@ body {
   height: 30px;
   padding: 0;
   background-color: var(--secondary-color);
+  
 }
 
 .modal-btn:hover{
   fill: var(--accent-color);
+  cursor: pointer;
+}
+
+input, textarea {
+  outline: none;
 }
 
 .form-wrapper{
@@ -323,7 +329,38 @@ body {
 
 
 .form-label{
-  display: flex;
+  display: flex; 
+}
+
+
+
+.form-input:hover,
+.form-input:focus{
+  border-color: var(--accent-color);
+  cursor: pointer;
+  padding-left: 35px;
+}
+
+
+.form-input:hover ~ .form-icon{
+  fill: var(--accent-color);
+  
+}
+
+.form-input:focus~.form-icon {
+  fill: var(--accent-color)
+}
+
+.form-field{
+  position: relative;
+}
+
+.form-icon{
+  position: absolute;
+  bottom: 11px;
+  left: 12px;
+  
+  
 }
 
 .form-label-agree{
@@ -341,6 +378,8 @@ body {
   border: 1px solid rgba(33, 33, 33, 0.2);
   
 }
+
+
 
 .form-field label{
   margin-bottom: 4px;
@@ -384,9 +423,10 @@ body {
   border-radius: 4px;
   padding: 10px 55px;
   margin-bottom: 40px;
+  cursor: pointer;
 }
 
-.form-wrapper-btn:hover
+.form-wrapper-btn:hover,
 .form-wrapper-btn:focus{
   background-color: var(--hover-button-color);
 }
