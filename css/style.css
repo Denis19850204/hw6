@@ -10,7 +10,6 @@
   --border-color: #eeeeee;
   --header-border-color: #ececec;
   --icon-fill-color: #afb1b8;
- 
 }
 /* ------------------------------------------- */
 
@@ -260,24 +259,24 @@ body {
   pointer-events: none;
 }
 
-.modal-wrapper {  
+.modal-wrapper {
   position: absolute;
   width: 528px;
   height: 581px;
   top: 50%;
-  left: 50%;  
+  left: 50%;
   background-color: var(--secondary-color);
   border-radius: 4px;
 
   transition: transform 400ms ease-in-out 200ms, opacity 400ms ease-in-out 200ms;
 }
 
-.backdrop.is-hidden .modal-wrapper{
+.backdrop.is-hidden .modal-wrapper {
   transform: translate(-50%, -50%) scale(0.5);
   opacity: 0;
 }
 
-.backdrop .modal-wrapper{
+.backdrop .modal-wrapper {
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
 }
@@ -295,93 +294,97 @@ body {
   height: 30px;
   padding: 0;
   background-color: var(--secondary-color);
-  
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-btn:hover{
+.modal-btn:hover {
   fill: var(--accent-color);
   cursor: pointer;
 }
 
-input, textarea {
+input,
+textarea {
   outline: none;
 }
 
-.form-wrapper{
+.form-wrapper {
   width: 528px;
   padding: 40px;
-  
 }
 
-.form-field{
+.form-field {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
-  
-
 }
 
-.form-agree{
+.form-agree {
   display: flex;
   margin-bottom: 30px;
-  
 }
 
-
-.form-label{
-  display: flex; 
+.form-label {
+  display: flex;
 }
 
-
+.form-input {
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .form-input:hover,
-.form-input:focus{
+.form-input:focus {
   border-color: var(--accent-color);
   cursor: pointer;
   padding-left: 35px;
 }
 
-
-.form-input:hover ~ .form-icon{
+.form-input:hover ~ .form-icon {
   fill: var(--accent-color);
-  
 }
 
-.form-input:focus~.form-icon {
-  fill: var(--accent-color)
+.form-input:focus ~ .form-icon {
+  fill: var(--accent-color);
 }
 
-.form-field{
+.form-textarea {
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-textarea:hover,
+.form-textarea:focus {
+  border-color: var(--accent-color);
+}
+
+.form-field {
   position: relative;
 }
 
-.form-icon{
+.form-icon {
   position: absolute;
   bottom: 11px;
   left: 12px;
-  
-  
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-label-agree{
+.form-label-agree {
   margin-left: 9px;
 }
 
-.form-link-agree{
+.form-link-agree {
   color: var(--accent-color);
 }
 
-.form-field input, textarea{
+.form-field input,
+textarea {
   margin: 0;
-  padding: 11px 12px;  
+  padding: 11px 12px;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  
 }
 
-
-
-.form-field label{
+.form-field label {
   margin-bottom: 4px;
   font-weight: 400;
   font-size: 12px;
@@ -389,27 +392,24 @@ input, textarea {
   color: var(--main-text-color);
 }
 
-.form-field textarea::placeholder{   
+.form-field textarea::placeholder {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
-  
+
   color: rgba(117, 117, 117, 0.5);
 }
 
-
-.wrapper-text{  
+.wrapper-text {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.17;
   color: #212121;
   margin-top: 40px;
-  
-  
 }
 
-.form-wrapper-btn{
+.form-wrapper-btn {
   font-family: Roboto;
   font-style: 700;
   font-size: 16px;
@@ -424,21 +424,61 @@ input, textarea {
   padding: 10px 55px;
   margin-bottom: 40px;
   cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-wrapper-btn:hover,
-.form-wrapper-btn:focus{
+.form-wrapper-btn:focus {
   background-color: var(--hover-button-color);
 }
-  
 
-
-textarea{
+textarea {
   width: 448px;
   height: 120px;
   resize: none;
 }
 
+.form-agree {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox {
+  appearance: none;
+}
+
+.custom-checkbox {
+  width: 16px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: 2px solid var(--tittle-color);
+  outline-offset: -2px;
+  border-radius: 4px;
+  margin-right: 7px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-icon-checkbox {
+  opacity: 0;
+  fill: var(--secondary-color);
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox:checked + .custom-checkbox .form-icon-checkbox {
+  opacity: 1;
+  fill: var(--secondary-color);
+}
+
+.checkbox:checked + .custom-checkbox {
+  background-color: var(--accent-color);
+  outline-color: var(--accent-color);
+}
 
 /* --------------------------------------------- */
 
@@ -511,41 +551,37 @@ textarea{
 
 .list {
   display: flex;
-  
 }
 
-.work-item {  
+.work-item {
   position: relative;
-
 }
 
-.work-item::before{
+.work-item::before {
   position: absolute;
-  content: "";
+  content: '';
   display: block;
   width: 100%;
   height: 70px;
   bottom: 0;
   right: 0;
   background-color: rgba(47, 48, 58, 0.8);
-  
 }
 
 .work-text {
   display: flex;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
   position: absolute;
-  width: 100%;  
-  bottom: 27px;  
-  text-transform: uppercase;  
+  width: 100%;
+  bottom: 27px;
+  text-transform: uppercase;
   font-family: Roboto;
   font-size: 14px;
   font-weight: 700;
   line-height: 16px;
-  letter-spacing: 0.03em;  
-  color: var(--secondary-color); 
-  
+  letter-spacing: 0.03em;
+  color: var(--secondary-color);
 }
 
 .item:not(:last-child) {
@@ -598,7 +634,7 @@ textarea{
   margin-bottom: 16px;
 }
 
-.icon-social:not(:last-child){
+.icon-social:not(:last-child) {
   margin-right: 10px;
 }
 
@@ -618,10 +654,8 @@ textarea{
   color: var(--icon-fill-color);
   border-radius: 50px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-
 
 .social-link:hover,
 .social-link:focus {
@@ -654,8 +688,7 @@ textarea{
   border-radius: 4px;
   color: var(--icon-fill-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-   border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
-  
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover,
@@ -705,13 +738,11 @@ textarea{
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  
 }
 
 .street,
 .mail {
   margin-bottom: 9px;
-  
 }
 
 .address-list .contact {
@@ -722,16 +753,11 @@ textarea{
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-    
 }
 
-.contact{
-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.contact {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-  
-
-
-
 
 .address-list .contact:hover,
 .address-list .contact:focus {
@@ -742,7 +768,8 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin-right: 70px;
 }
 
-.footer-subtitle, .form-text {
+.footer-subtitle,
+.form-text {
   font-family: 'Roboto';
   font-weight: 700;
   font-size: 14px;
@@ -778,70 +805,58 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   fill: var(--secondary-color);
 }
 
-.form-list{
+.form-list {
   margin-left: 93px;
 }
 
-.form-text{
+.form-text {
   margin-bottom: 20px;
-  
 }
 
-.form-btn-icon{
+.form-btn-icon {
   margin-left: 10px;
   fill: var(--secondary-color);
-  
-  
 }
 
-.footer-input{
+.footer-input {
   width: 358px;
   padding-left: 16px;
   padding-top: 15px;
   padding-bottom: 15px;
   background-color: inherit;
-  
+
   box-shadow: 0px 4px 4px 0px #00000026;
-  border: 1px solid #FFFFFF4D;
+  border: 1px solid #ffffff4d;
   border-radius: 4px;
-  font-family:Roboto;
+  font-family: Roboto;
   font-size: 16px;
   line-height: 1.25;
-  
-    
+  color: var(--secondary-color);
 }
 
-.footer-input:hover,
-.footer-input:focus{
-  border-color: var(--accent-color);
-}
-
-.form-btn{
+.form-btn {
   display: inline-flex;
   background-color: var(--accent-color);
-    color: var(--secondary-color);
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    align-items: center;
-    letter-spacing: 0.06em;
-    cursor: pointer;
-    padding-top: 10px;
-    padding-right: 29px;
-    padding-bottom: 10px;
-    padding-left: 29px;
-    border: transparent;
-    border-radius: 4px;
-    margin-left: 12px;
-    
+  color: var(--secondary-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  align-items: center;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-right: 29px;
+  padding-bottom: 10px;
+  padding-left: 29px;
+  border: transparent;
+  border-radius: 4px;
+  margin-left: 12px;
 }
 
 .form-btn:hover,
-.form-btn:focus{
+.form-btn:focus {
   background-color: var(--hover-button-color);
 }
-
-
 
 /* --------------------------------------- */
 
@@ -891,12 +906,9 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 6px 22px;
   border-radius: 4px;
   border: transparent;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-  
-
 
 .portfolio-button:hover,
 .portfolio-button:focus {
@@ -914,15 +926,12 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin-right: 30px;
   margin-bottom: 30px;
   background-color: var(--secondary-color);
-  
 }
 
 .work-link {
   display: block;
   text-decoration: none;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
-  
 }
 
 .work-thumb {
@@ -941,16 +950,15 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   height: 100%;
   background-color: var(--accent-color);
   transform: translateY(101%);
-     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    padding: 63px 24px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 63px 24px;
 }
 
 .work-link:hover .work-overlay {
   transform: translateY(0);
-  
 }
 
-.work-link:focus .work-overlay{
+.work-link:focus .work-overlay {
   transform: translateY(0);
 }
 
@@ -975,8 +983,6 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .work-link:hover,
 .work-link:focus {
   box-shadow: 0px 4px 4px 0px #00000040;
-  
-  
 }
 
 .work-list:nth-child(3n) {

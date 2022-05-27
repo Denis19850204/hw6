@@ -100,13 +100,21 @@
                
                <div class="form-field">
                 <label for="coment" class="form-label">Комментарий</label>
-                <textarea name="coment" id="coment" rows="10" placeholder="Введите текст"></textarea>
+                <textarea class="form-textarea" name="coment" id="coment" rows="10" placeholder="Введите текст"></textarea>
                </div>
 
-               <div class="form-agree">
-                <input type="checkbox" name="check" value="agree">
-                <label for="agree" class="form-label-agree" >Соглашаюсь с рассылкой и принимаю <a class="form-link-agree" href="">Условия договора</a> </label>
-               </div>
+               <label class="form-agree">
+                <input class="checkbox" type="checkbox">
+                <span class="custom-checkbox">
+                  <svg class="form-icon-checkbox" width="16" height="15">
+                  <use href="./img/symbol-defs.svg#icon-icon-check"></use>
+                </svg>
+               </span>
+
+                <span>Соглашаюсь с рассылкой и принимаю <a class="form-link-agree" href="">Условия договора</a> </span>
+               </label>
+
+               
 
                 <button class="form-wrapper-btn" type="submit">Отправить</button>
               
