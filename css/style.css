@@ -830,11 +830,12 @@ textarea {
 }
 
 .footer-social {
-  margin-right: 93px;
+  margin-right: auto;
 }
 
 .form-list {
-  width: 550px;
+  
+  width: 570px;
 }
 
 .form-text {
