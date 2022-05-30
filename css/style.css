@@ -314,14 +314,13 @@ textarea {
 }
 
 .form-field {
-  width: 448px;
+  
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
-.form-field-coment {
-  width: 448px;
+.form-field-coment {  
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
@@ -494,15 +493,17 @@ textarea {
   outline-color: var(--accent-color);
 }
 
-.checkbox:focus + .custom-checkbox .form-icon-checkbox {
+.checkbox:focus + .custom-checkbox  {
   opacity: 1;
   fill: var(--secondary-color);
+  outline-color: var(--accent-color);
+  
 }
 
-.checkbox:focus + .custom-checkbox {
+/* .checkbox:focus + .custom-checkbox {
   background-color: var(--accent-color);
   outline-color: var(--accent-color);
-}
+} */
 
 /* --------------------------------------------- */
 
